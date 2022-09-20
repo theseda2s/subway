@@ -1,4 +1,7 @@
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+@import './constant/breakpoint';
+
 @import './base/normalize';
 @import './base/reset';
-
-@import '../node_modules/bootstrap/scss/bootstrap';
+@import './base/globals';

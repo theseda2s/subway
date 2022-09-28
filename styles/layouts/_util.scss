@@ -1,0 +1,62 @@
+.util {
+  margin-bottom: 20px;
+}
+
+.logo {
+  @include flexbox;
+  padding: 30px 0;
+
+  a {
+    display: inline-block;
+    width: 120px;
+    height: 40px;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.auth {
+  position: relative;
+  display: none;
+
+  &-list {
+    @include flexbox(end);
+    position: absolute;
+    right: 0;
+    bottom: 20px;
+  }
+
+  &-item {
+    a {
+      font-size: 13px;
+      color: $gray-600;
+
+      &:hover {
+        color: $gray-400;
+      }
+    }
+
+    &:first-child::after {
+      padding: 5px;
+      content: 'ㆍ';
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .logo {
+    a {
+      width: 200px;
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .auth {
+    display: block;
+  }
+}

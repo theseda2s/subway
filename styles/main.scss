@@ -1,7 +1,10 @@
 @import '../node_modules/bootstrap/scss/bootstrap';
 
-@import './constant/breakpoint';
-
 @import './base/normalize';
 @import './base/reset';
-@import './base/globals';
+
+@import './mixins/flexbox';
+@import './mixins/positions';
+
+@import './layouts/util';
+@import './layouts/gnb';

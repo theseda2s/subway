@@ -15,17 +15,25 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <div id="wrap">
+    <div class="wrap">
       <header class="global-header">
         <div class="util">
           <div class="container">
             <div class="row">
               <div class="col-12">
-                <h1 class="logo">
-                  <a href="/">
-                    <img src="./assets/icons/logo.png" alt="써브웨이" />
-                  </a>
-                </h1>
+                <div class="util-wrapper">
+                  <h1 class="logo">
+                    <a href="/">
+                      <img src="./assets/icons/logo.png" alt="써브웨이" />
+                    </a>
+                  </h1>
+
+                  <button
+                    class="menu-button"
+                    type="button"
+                    aria-label="메뉴 열기 버튼"
+                  ></button>
+                </div>
                 <div class="auth">
                   <ul class="auth-list">
                     <li class="auth-item">
@@ -167,11 +175,6 @@
                     </li>
                   </ul>
                 </nav>
-                <button
-                  class="sm-only"
-                  type="button"
-                  aria-label="메뉴 열기 버튼"
-                ></button>
               </div>
             </div>
           </div>

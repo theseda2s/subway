@@ -18,6 +18,12 @@
         display: block;
         width: 100%;
         height: auto;
+        transition: opacity 100ms ease-in-out;
+
+        &:active,
+        &:hover {
+          opacity: 0.6;
+        }
       }
     }
   }

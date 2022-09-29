@@ -31,7 +31,7 @@
                   <button
                     class="menu-button"
                     type="button"
-                    aria-label="메뉴 열기 버튼"
+                    aria-label="메뉴 열기"
                   ></button>
                 </div>
                 <div class="auth">
@@ -180,6 +180,98 @@
           </div>
         </div>
       </header>
+
+      <aside class="sidebar">
+        <header class="sidebar-header">
+          <h2 class="logo">
+            <a href="/">
+              <img src="./assets/icons/logo.png" alt="써브웨이" />
+            </a>
+          </h2>
+          <a href="#" aria-label="설정 페이지로 이동"> </a>
+          <button
+            class="close-button"
+            type="button"
+            aria-label="메뉴 닫기"
+          ></button>
+
+          <div class="signout-card">
+            <p class="info">
+              로그인 해주세요.<br />
+              아직 회원이 아니신가요?
+            </p>
+            <div class="button-group">
+              <a
+                class="btn btn-warning"
+                href="#"
+                aria-label="로그인 페이지로 이동"
+                >로그인</a
+              >
+              <a
+                class="btn btn-light"
+                href="#"
+                aria-label="회원가입 페이지로 이동"
+                >회원가입</a
+              >
+            </div>
+          </div>
+        </header>
+
+        <div class="sidebar-quick-menu">
+          <ul class="quick-list">
+            <li class="quick-item">
+              <a href="#">
+                <figure>
+                  <img src="./assets/icons/quick-01-fast.png" alt="" />
+                </figure>
+                <figcaption>FAST-SUB</figcaption>
+              </a>
+            </li>
+            <li class="quick-item">
+              <a href="#">
+                <figure>
+                  <img src="./assets/icons/quick-02-home.png" alt="" />
+                </figure>
+                <figcaption>HOME-SUB</figcaption>
+              </a>
+            </li>
+            <li class="quick-item">
+              <a href="#">
+                <figure>
+                  <img src="./assets/icons/quick-03-group.png" alt="" />
+                </figure>
+                <figcaption>단체주문</figcaption>
+              </a>
+            </li>
+            <li class="quick-item">
+              <a href="#">
+                <figure>
+                  <img src="./assets/icons/quick-04-coupon.png" alt="" />
+                </figure>
+                <figcaption>써브카드</figcaption>
+              </a>
+            </li>
+            <li class="quick-item">
+              <a href="#">
+                <figure>
+                  <img src="./assets/icons/quick-05-subcard.png" alt="" />
+                </figure>
+                <figcaption>쿠폰</figcaption>
+              </a>
+            </li>
+            <li class="quick-item">
+              <a href="#">
+                <figure>
+                  <img src="./assets/icons/quick-06-gift.png" alt="" />
+                </figure>
+                <figcaption>e-Gift</figcaption>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <nav class="sidebar-nav"></nav>
+      </aside>
     </div>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"

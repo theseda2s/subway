@@ -1,62 +1,90 @@
 .util {
   margin-bottom: 20px;
-}
 
-.logo {
-  @include flexbox;
-  padding: 30px 0;
+  &-wrapper {
+    position: relative;
+  }
 
-  a {
-    display: inline-block;
-    width: 120px;
-    height: 40px;
+  .logo {
+    @include flexbox;
+    padding: 20px 0;
 
-    img {
-      display: block;
-      width: 100%;
-      height: auto;
+    a {
+      display: inline-block;
+      width: 120px;
+      height: 40px;
+
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
     }
   }
-}
 
-.auth {
-  position: relative;
-  display: none;
-
-  &-list {
-    @include flexbox(end);
-    position: absolute;
-    right: 0;
-    bottom: 20px;
+  .menu-button {
+    @include pos-center-y;
+    top: 43%;
+    width: 40px;
+    height: 40px;
+    background-image: url('./assets/icons/aside-menu.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 20px auto;
   }
 
-  &-item {
-    a {
-      font-size: 13px;
-      color: $gray-600;
+  .auth {
+    display: none;
+  }
 
-      &:hover {
-        color: $gray-400;
+  @include media-breakpoint-up(md) {
+    .logo {
+      a {
+        width: 200px;
       }
     }
 
-    &:first-child::after {
-      padding: 5px;
-      content: 'ㆍ';
+    .menu-button {
+      top: 50%;
+      background-size: 30px auto;
     }
   }
-}
 
-@include media-breakpoint-up(md) {
-  .logo {
-    a {
-      width: 200px;
+  @include media-breakpoint-up(lg) {
+    .logo {
+      padding: 30px 0;
     }
-  }
-}
 
-@include media-breakpoint-up(lg) {
-  .auth {
-    display: block;
+    .menu-button {
+      display: none;
+    }
+
+    .auth {
+      position: relative;
+      display: block;
+
+      &-list {
+        @include flexbox(end);
+        position: absolute;
+        right: 0;
+        bottom: 20px;
+      }
+
+      &-item {
+        a {
+          font-size: 13px;
+          color: $gray-600;
+
+          &:hover {
+            color: $gray-400;
+          }
+        }
+
+        &:first-child::after {
+          padding: 5px;
+          content: 'ㆍ';
+        }
+      }
+    }
   }
 }

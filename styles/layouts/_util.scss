@@ -5,6 +5,10 @@
     position: relative;
   }
 
+  &-left {
+    position: relative;
+  }
+
   .logo {
     @include flexbox;
     padding: 20px 0;
@@ -57,6 +61,12 @@
   }
 
   @include media-breakpoint-up(lg) {
+    &-right {
+      position: absolute;
+      right: 0;
+      bottom: 30px;
+    }
+
     .logo {
       padding: 30px 0;
     }
@@ -66,20 +76,18 @@
     }
 
     .auth {
-      position: relative;
-      display: block;
+      @include flexbox(end);
 
       &-list {
-        @include flexbox(end);
-        position: absolute;
-        right: 0;
-        bottom: 20px;
+        @include flexbox;
+        margin-right: 30px;
       }
 
       &-item {
         a {
           font-size: 13px;
           color: $gray-600;
+          transition: color 200ms ease-in-out;
 
           &:hover {
             color: $gray-400;
@@ -90,6 +98,49 @@
           padding: 5px;
           content: 'ㆍ';
         }
+      }
+
+      .button-group {
+        @include flexbox(start);
+
+        & > * {
+          display: block;
+          width: 30px;
+          height: 30px;
+          background-position: center center;
+          background-repeat: no-repeat;
+          transition: opacity 200ms ease-in-out;
+
+          &:hover {
+            opacity: 0.7;
+          }
+        }
+      }
+
+      .cart {
+        position: relative;
+        margin-right: 10px;
+        background-image: url('./assets/icons/util-cart.png');
+
+        .badge {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          display: block;
+          font-size: 10px;
+          background-color: $orange;
+          border-radius: 50%;
+          // NOTE: TRUNCATE 적용하기
+        }
+      }
+
+      .global {
+        display: block;
+        width: 32px;
+        height: 32px;
+        background-image: url('./assets/icons/util-global.png');
+        background-position: center center;
+        background-repeat: no-repeat;
       }
     }
   }

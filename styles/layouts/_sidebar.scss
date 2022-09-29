@@ -1,0 +1,126 @@
+.sidebar {
+  $sidebar-width: 290px;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 95%;
+  min-width: $sidebar-width;
+
+  &-header {
+    height: 280px;
+    padding: 10px 0 0 20px;
+    background-color: $green;
+  }
+
+  &-util {
+    @include flexbox(between);
+    padding-right: 10px;
+    margin-bottom: 20px;
+
+    .logo {
+      a {
+        display: inline-block;
+        width: 80px;
+        height: 40px;
+
+        img {
+          display: inline-block;
+          width: 100%;
+          height: auto;
+          transition: opacity 100ms ease-in-out;
+
+          &:active,
+          &:hover {
+            opacity: 0.6;
+          }
+        }
+      }
+    }
+
+    .button-group > * {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      background-position: center center;
+      background-repeat: no-repeat;
+      transition: opacity 100ms ease-in-out;
+
+      &:active,
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+
+    .setting {
+      background-image: url('./assets/icons/setting.png');
+      background-size: cover;
+    }
+
+    .close-button {
+      background-image: url('./assets/icons/close.png');
+      background-size: 27px;
+    }
+  }
+
+  .info {
+    margin-bottom: 30px;
+    font-size: 16px;
+    color: $white;
+  }
+
+  .button-group {
+    @include flexbox;
+    padding-right: 20px;
+
+    .btn {
+      flex-grow: 1;
+      flex-shrink: 0;
+      max-width: 150px;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: $font-weight-bold;
+      border: 0;
+      border-radius: 30px;
+      transition: background-color 200ms ease-in-out;
+    }
+
+    .btn-login {
+      margin-right: 10px;
+      color: $white;
+      background-color: $yellow;
+
+      &:hover,
+      &:active {
+        background-color: $yellow-light;
+      }
+    }
+
+    .btn-join {
+      background-color: $white;
+
+      &:hover,
+      &:active {
+        background-color: $gray-200;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    &-header {
+      .logo {
+        a {
+          width: 100px;
+        }
+      }
+
+      .info {
+        font-size: 18px;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    display: none;
+  }
+}

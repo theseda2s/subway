@@ -183,17 +183,21 @@
 
       <aside class="sidebar">
         <header class="sidebar-header">
-          <h2 class="logo">
-            <a href="/">
-              <img src="./assets/icons/logo.png" alt="써브웨이" />
-            </a>
-          </h2>
-          <a href="#" aria-label="설정 페이지로 이동"> </a>
-          <button
-            class="close-button"
-            type="button"
-            aria-label="메뉴 닫기"
-          ></button>
+          <div class="sidebar-util">
+            <h2 class="logo">
+              <a href="/">
+                <img src="./assets/icons/logo-sidebar.png" alt="써브웨이" />
+              </a>
+            </h2>
+            <div class="button-group">
+              <a href="#" class="setting" aria-label="설정 페이지로 이동"> </a>
+              <button
+                class="close-button"
+                type="button"
+                aria-label="메뉴 닫기"
+              ></button>
+            </div>
+          </div>
 
           <div class="signout-card">
             <p class="info">
@@ -202,13 +206,13 @@
             </p>
             <div class="button-group">
               <a
-                class="btn btn-warning"
+                class="btn btn-login"
                 href="#"
                 aria-label="로그인 페이지로 이동"
                 >로그인</a
               >
               <a
-                class="btn btn-light"
+                class="btn btn-join"
                 href="#"
                 aria-label="회원가입 페이지로 이동"
                 >회원가입</a

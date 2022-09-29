@@ -1,5 +1,7 @@
 @import '../node_modules/bootstrap/scss/bootstrap';
 
+@import './constants/colors';
+
 @import './base/normalize';
 @import './base/reset';
 
@@ -9,3 +11,4 @@
 @import './layouts/wrap';
 @import './layouts/util';
 @import './layouts/gnb';
+@import './layouts/sidebar';

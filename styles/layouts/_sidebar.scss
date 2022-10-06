@@ -1,11 +1,19 @@
 .sidebar {
-  $sidebar-width: 290px;
+  $sidebar-width: 320px;
 
   position: fixed;
   top: 0;
   left: 0;
   width: 95%;
+  height: 100vh;
   min-width: $sidebar-width;
+  background-color: $white;
+  transform: translate3d(-100%, 0, 0);
+  transition: transform 200ms ease-in-out;
+
+  &.is-active {
+    transform: translate3d(0, 0, 0);
+  }
 
   &-header {
     height: 280px;
@@ -21,7 +29,7 @@
     .logo {
       a {
         display: inline-block;
-        width: 80px;
+        width: 90px;
         height: 40px;
 
         img {
@@ -44,6 +52,7 @@
       height: 40px;
       background-position: center center;
       background-repeat: no-repeat;
+      background-size: cover;
       transition: opacity 100ms ease-in-out;
 
       &:active,
@@ -52,9 +61,16 @@
       }
     }
 
+    .refresh {
+      background-image: url('./assets/icons/refresh.png');
+    }
+
+    .push {
+      background-image: url('./assets/icons/alarm.png');
+    }
+
     .setting {
       background-image: url('./assets/icons/setting.png');
-      background-size: cover;
     }
 
     .close-button {
@@ -63,45 +79,47 @@
     }
   }
 
-  .info {
-    margin-bottom: 30px;
-    font-size: 16px;
-    color: $white;
-  }
-
-  .button-group {
-    @include flexbox;
-    padding-right: 20px;
-
-    .btn {
-      flex-grow: 1;
-      flex-shrink: 0;
-      max-width: 150px;
-      padding: 10px 20px;
+  &-auth {
+    .info {
+      margin-bottom: 30px;
       font-size: 16px;
-      font-weight: $font-weight-bold;
-      border: 0;
-      border-radius: 30px;
-      transition: background-color 200ms ease-in-out;
-    }
-
-    .btn-login {
-      margin-right: 10px;
       color: $white;
-      background-color: $yellow;
-
-      &:hover,
-      &:active {
-        background-color: $yellow-light;
-      }
     }
 
-    .btn-join {
-      background-color: $white;
+    .button-group {
+      @include flexbox;
+      padding-right: 20px;
 
-      &:hover,
-      &:active {
-        background-color: $gray-200;
+      .btn {
+        flex-grow: 1;
+        flex-shrink: 0;
+        max-width: 200px;
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: $font-weight-bold;
+        border: 0;
+        border-radius: 30px;
+        transition: background-color 200ms ease-in-out;
+      }
+
+      .btn-login {
+        margin-right: 10px;
+        color: $white;
+        background-color: $yellow;
+
+        &:hover,
+        &:active {
+          background-color: $yellow-light;
+        }
+      }
+
+      .btn-join {
+        background-color: $white;
+
+        &:hover,
+        &:active {
+          background-color: $gray-200;
+        }
       }
     }
   }

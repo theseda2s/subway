@@ -1,0 +1,129 @@
+.sidebar-user {
+  .user-info {
+    @include flexbox(start);
+    margin-bottom: 20px;
+    transition: opacity 200ms ease-in-out;
+
+    &:hover,
+    &:active {
+      opacity: 0.8;
+    }
+  }
+
+  .user-profile {
+    margin-right: 15px;
+  }
+
+  .user-image {
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    background-color: $white;
+    background-image: url('./assets/images/profile-image.png');
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 2px solid $yellow;
+    border-radius: 15px;
+  }
+
+  .user-detail {
+    @include column-flexbox(center, start);
+    color: $white;
+
+    strong {
+      font-size: 18px;
+      font-weight: $font-weight-normal;
+    }
+
+    .user-email {
+      font-size: 12px;
+      opacity: 0.5;
+    }
+  }
+
+  .user-keep {
+    padding-right: 20px;
+    margin-bottom: 20px;
+
+    dl > div {
+      @include flexbox(between);
+      font-weight: $font-weight-bold;
+    }
+
+    dt {
+      @include inline-flexbox(start);
+      font-size: 13px;
+      color: $white;
+      cursor: default;
+
+      &::before {
+        display: block;
+        width: 25px;
+        height: 25px;
+        background-repeat: no-repeat;
+        background-size: 20px 20px;
+        content: '';
+      }
+    }
+
+    dd {
+      @include inline-flexbox(start);
+      font-size: 20px;
+      color: $yellow;
+      text-align: right;
+      transition: opacity 200ms ease-in-out;
+
+      &:hover,
+      &:active {
+        opacity: 0.8;
+      }
+
+      a {
+        @include truncate;
+        display: block;
+        width: 130px;
+      }
+    }
+
+    .point {
+      dt::before {
+        background-image: url('./assets/icons/side-point.png');
+      }
+
+      dd::after {
+        content: 'P';
+      }
+    }
+
+    .money {
+      dt::before {
+        background-image: url('./assets/icons/side-money.png');
+      }
+
+      dd::after {
+        content: '원';
+      }
+    }
+
+    .coupon {
+      dt::before {
+        background-image: url('./assets/icons/side-coupon.png');
+      }
+    }
+  }
+
+  .barcode {
+    height: 50px;
+    margin-right: 20px;
+    text-align: center;
+    background-color: $yellow;
+    border-radius: 30px 0 0 0;
+
+    .qr-check {
+      font-weight: $font-weight-bold;
+      line-height: 50px;
+      color: $white;
+    }
+  }
+}

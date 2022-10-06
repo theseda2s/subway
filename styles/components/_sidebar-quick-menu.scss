@@ -1,0 +1,65 @@
+.sidebar-quick-menu {
+  padding: 25px 20px;
+  margin: 0 20px;
+  background-color: $white;
+  border-radius: 0 0 30px 0;
+
+  .quick-list {
+    @include flexbox;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  .quick-item {
+    @include inline-flexbox;
+    width: calc(100% / 3);
+    transition: opacity 200ms ease-in-out;
+
+    &:active,
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:nth-child(-n + 3) {
+      margin-bottom: 20px;
+    }
+
+    a {
+      display: block;
+
+      .image-card {
+        width: 100px;
+        height: auto;
+
+        img {
+          display: block;
+          width: 50px;
+          height: 100%;
+          margin: 0 auto;
+        }
+
+        span {
+          display: block;
+          font-size: 12px;
+          font-weight: $font-weight-bold;
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    .quick-item {
+      a {
+        .image-card {
+          img {
+            width: 70px;
+          }
+
+          span {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,12 +1,13 @@
 .sidebar {
+  @include no-scrollbar;
   $sidebar-width: 320px;
-
   position: fixed;
   top: 0;
   left: 0;
   width: 95%;
   height: 100vh;
   min-width: $sidebar-width;
+  overflow-y: scroll;
   background-color: $gray-100;
   transform: translate3d(-100%, 0, 0);
   transition: transform 200ms ease-in-out;

@@ -1,0 +1,86 @@
+.drawer-menu {
+  &.is-active {
+    .drawer-menu-button {
+      color: $green;
+
+      .bi {
+        color: $green-dark;
+        transform: rotate(-180deg);
+      }
+    }
+  }
+
+  &-button {
+    @include flexbox(start);
+    position: relative;
+    width: 100%;
+    padding: 15px 20px;
+    font-weight: $font-weight-bold;
+    border-bottom: 1px solid $gray-100;
+    transition: color 200ms ease-in-out, background-color 200ms ease-in-out;
+
+    &:active {
+      color: $green;
+      background-color: $gray-200;
+    }
+
+    .bi {
+      position: absolute;
+      right: 20px;
+      font-size: 20px;
+      color: $gray-500;
+      transition: color 250ms ease-in-out, transform 250ms ease-in-out;
+    }
+  }
+
+  &:last-child {
+    .drawer-menu-button {
+      border-bottom: 0;
+    }
+  }
+
+  &-icon {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin-right: 15px;
+    overflow: hidden;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &-content {
+    overflow: hidden;
+    transition: height 250ms ease-in-out;
+  }
+
+  &-list {
+    padding: 25px 0;
+    background-color: $gray-light;
+  }
+
+  &-item {
+    transition: background-color 200ms ease-in-out;
+
+    &:active {
+      background-color: $gray-200;
+
+      a {
+        color: $green;
+      }
+    }
+
+    a {
+      @include flexbox(start);
+      width: 100%;
+      padding: 8px 0 8px 60px;
+      overflow: hidden;
+      font-size: 14px;
+      transition: color 200ms ease-in-out;
+    }
+  }
+}

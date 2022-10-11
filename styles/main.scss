@@ -1,6 +1,7 @@
 @import '../node_modules/bootstrap/scss/bootstrap';
 
 @import './constants/colors';
+@import './constants/z-indexes';
 
 @import './base/normalize';
 @import './base/reset';
@@ -15,6 +16,7 @@
 @import './components/drawer-menu';
 
 @import './layouts/wrap';
+@import './layouts/overlay';
 @import './layouts/util';
 @import './layouts/gnb';
 @import './layouts/sidebar';

@@ -1,9 +1,11 @@
 .sidebar {
-  @include no-scrollbar;
   $sidebar-width: 320px;
+
+  @include no-scrollbar;
   position: fixed;
   top: 0;
   left: 0;
+  z-index: $sidebar-level;
   width: 95%;
   height: 100vh;
   min-width: $sidebar-width;

@@ -394,34 +394,60 @@
 
           <!-- 로그인 한 경우 -->
           <div class="drawer-menu">
-            <button class="drawer-menu-button" type="button">
-              <img src="./assets/icons/gnb-07-mysub.png" alt="MY-SUB 아이콘" />
+            <a
+              href="#"
+              class="drawer-menu-button"
+              aria-label="MY-SUB 페이지로 이동"
+            >
+              <i class="drawer-menu-icon" aria-hidden>
+                <img
+                  src="./assets/icons/gnb-07-mysub.png"
+                  alt="MY-SUB 아이콘"
+                />
+              </i>
               MY-SUB
-            </button>
+            </a>
           </div>
           <div class="drawer-menu">
-            <button class="drawer-menu-button" type="button">
-              <img src="./assets/icons/gnb-08-alarm.png" alt="알림함 아이콘" />
+            <a
+              href="#"
+              class="drawer-menu-button"
+              aria-label="알림함 페이지로 이동"
+            >
+              <i class="drawer-menu-icon" aria-hidden>
+                <img
+                  src="./assets/icons/gnb-08-alarm.png"
+                  alt="알림함 아이콘"
+                />
+              </i>
               알림함
-            </button>
+            </a>
           </div>
           <div class="drawer-menu">
-            <button class="drawer-menu-button" type="button">
-              <img
-                src="./assets/icons/gnb-09-order.png"
-                alt="주문내역조회 아이콘"
-              />
+            <a
+              href="#"
+              class="drawer-menu-button"
+              aria-label="주문내역조회 페이지로 이동"
+            >
+              <i class="drawer-menu-icon" aria-hidden>
+                <img
+                  src="./assets/icons/gnb-09-order.png"
+                  alt="주문내역조회 아이콘"
+                />
+              </i>
               주문내역조회
-            </button>
+            </a>
           </div>
+          <!-- 로그인 한 경우 -->
 
           <div class="drawer-menu">
             <button class="drawer-menu-button" type="button">
-              <img
-                class="drwaer-menu-icon"
-                src="./assets/icons/gnb-01-menu.png"
-                alt="메뉴소개 아이콘"
-              />
+              <i class="drawer-menu-icon" aria-hidden>
+                <img
+                  src="./assets/icons/gnb-01-menu.png"
+                  alt="메뉴소개 아이콘"
+                />
+              </i>
               메뉴소개
               <i class="bi bi-chevron-down" aria-hidden></i>
             </button>
@@ -450,11 +476,12 @@
           </div>
           <div class="drawer-menu">
             <button class="drawer-menu-button" type="button">
-              <img
-                class="drwaer-menu-icon"
-                src="./assets/icons/gnb-02-howto.png"
-                alt="이용방법 아이콘"
-              />
+              <i class="drawer-menu-icon" aria-hidden>
+                <img
+                  src="./assets/icons/gnb-02-howto.png"
+                  alt="이용방법 아이콘"
+                />
+              </i>
               이용방법
               <i class="bi bi-chevron-down" aria-hidden></i>
             </button>
@@ -474,11 +501,9 @@
           </div>
           <div class="drawer-menu">
             <button class="drawer-menu-button" type="button">
-              <img
-                class="drwaer-menu-icon"
-                src="./assets/icons/gnb-03-news.png"
-                alt="새소식 아이콘"
-              />
+              <i class="drawer-menu-icon" aria-hidden>
+                <img src="./assets/icons/gnb-03-news.png" alt="새소식 아이콘" />
+              </i>
               새소식
               <i class="bi bi-chevron-down" aria-hidden></i>
             </button>
@@ -498,11 +523,12 @@
           </div>
           <div class="drawer-menu">
             <button class="drawer-menu-button" type="button">
-              <img
-                class="drwaer-menu-icon"
-                src="./assets/icons/gnb-04-subway.png"
-                alt="써브웨이 아이콘"
-              />
+              <i class="drawer-menu-icon" aria-hidden>
+                <img
+                  src="./assets/icons/gnb-04-subway.png"
+                  alt="써브웨이 아이콘"
+                />
+              </i>
               써브웨이
               <i class="bi bi-chevron-down" aria-hidden></i>
             </button>
@@ -522,12 +548,13 @@
           </div>
           <div class="drawer-menu">
             <button class="drawer-menu-button" type="button">
-              <img
-                class="drwaer-menu-icon"
-                src="./assets/icons/gnb-05-store.png"
-                alt="가맹정 아이콘"
-              />
-              가맹정
+              <i class="drawer-menu-icon" aria-hidden>
+                <img
+                  src="./assets/icons/gnb-05-store.png"
+                  alt="가맹점 아이콘"
+                />
+              </i>
+              가맹점
               <i class="bi bi-chevron-down" aria-hidden></i>
             </button>
             <div class="drawer-menu-content">
@@ -552,11 +579,12 @@
           </div>
           <div class="drawer-menu">
             <button class="drawer-menu-button" type="button">
-              <img
-                class="drwaer-menu-icon"
-                src="./assets/icons/gnb-06-customer.png"
-                alt="고객센터 아이콘"
-              />
+              <i class="drawer-menu-icon" aria-hidden>
+                <img
+                  src="./assets/icons/gnb-06-customer.png"
+                  alt="고객센터 아이콘"
+                />
+              </i>
               고객센터
               <i class="bi bi-chevron-down" aria-hidden></i>
             </button>
@@ -586,5 +614,12 @@
     ></script>
     <script src="./js/gnb.js"></script>
     <script src="./js/sidebar.js"></script>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.min.js"
+      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/sidebar-drawer.js"></script>
   </body>
 </html>

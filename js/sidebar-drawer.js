@@ -1,13 +1,13 @@
-$(document).ready(function () {
-  $('.drawer-menu-content').hide()
+const drawerMenu = $('.drawer-menu')
+const drawerMenuButton = $('button.drawer-menu-button')
+const drawerMenuContent = $('.drawer-menu-content')
 
-  function toggleDrawerMenu() {
-    $('.drawer-menu')
-      .not($(this).parent().toggleClass('is-active'))
-      .removeClass('is-active')
-    $('.drawer-menu-content')
-      .not($(this).next('.drawer-menu-content').slideToggle(250))
-      .hide()
-  }
-  $('button.drawer-menu-button').click(toggleDrawerMenu)
-})
+drawerMenuContent.hide()
+
+function toggleDrawerMenu() {
+  drawerMenu
+    .not($(this).parent().toggleClass('is-active'))
+    .removeClass('is-active')
+  drawerMenuContent.not($(this).next(drawerMenuContent).slideToggle(250)).hide()
+}
+drawerMenuButton.click(toggleDrawerMenu)

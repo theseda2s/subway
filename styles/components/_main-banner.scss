@@ -1,0 +1,73 @@
+.main-banner {
+  position: relative;
+
+  .swiper {
+    a {
+      display: block;
+
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    &-pagination-bullet {
+      width: 10px;
+      height: 10px;
+      background-color: $gray-100;
+      opacity: 1;
+
+      &-active {
+        width: 30px;
+        background-color: $yellow;
+        border-radius: 30px;
+      }
+    }
+  }
+
+  &.desktop-hidden {
+    .swiper-pagination {
+      bottom: 20px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      display: none;
+    }
+  }
+
+  &.desktop-only {
+    display: none;
+
+    @include media-breakpoint-up(lg) {
+      display: block;
+
+      .swiper {
+        a {
+          position: relative;
+          width: 0;
+          height: 350px;
+          padding-left: 100%;
+
+          img {
+            @include pos-center;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+
+        &-pagination {
+          bottom: 30px;
+        }
+      }
+    }
+
+    @include media-breakpoint-up(xl) {
+      .swiper {
+        a {
+          height: 440px;
+        }
+      }
+    }
+  }
+}

@@ -1,13 +1,5 @@
 .util {
-  margin-bottom: 20px;
-
-  &-wrapper {
-    position: relative;
-  }
-
-  &-left {
-    position: relative;
-  }
+  position: relative;
 
   .logo {
     @include flexbox;
@@ -16,7 +8,7 @@
     a {
       display: inline-block;
       width: 120px;
-      height: 40px;
+      height: auto;
 
       img {
         display: block;
@@ -32,19 +24,20 @@
     }
   }
 
+  .auth {
+    display: none;
+  }
+
   .menu-button {
-    @include pos-center-y;
-    top: 43%;
+    position: absolute;
+    top: 12px;
+    left: 10px;
     width: 40px;
     height: 40px;
     background-image: url('./assets/icons/aside-menu.png');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 20px auto;
-  }
-
-  .auth {
-    display: none;
   }
 
   @include media-breakpoint-up(md) {
@@ -55,12 +48,17 @@
     }
 
     .menu-button {
-      top: 50%;
+      top: 18px;
+      left: 16px;
       background-size: 30px auto;
     }
   }
 
   @include media-breakpoint-up(lg) {
+    &-wrapper {
+      position: relative;
+    }
+
     &-right {
       position: absolute;
       right: 0;

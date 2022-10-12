@@ -1,4 +1,4 @@
-const openMenuButton = document.querySelector('.util-left .menu-button')
+const openMenuButton = document.querySelector('.util .menu-button')
 const sidebar = document.querySelector('.sidebar')
 const overlay = document.querySelector('.overlay')
 const closeButton = sidebar.querySelector('.close-button')

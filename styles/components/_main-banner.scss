@@ -38,6 +38,7 @@
 
   &.desktop-only {
     display: none;
+    margin-top: 68px;
 
     @include media-breakpoint-up(lg) {
       display: block;

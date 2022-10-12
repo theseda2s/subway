@@ -1,12 +1,18 @@
-const gnb = document.querySelector('.gnb')
-const dropdown = gnb.querySelectorAll('.dropdown')
+const gnb = $('.gnb')
+const gnbBg = $('.gnb-bg')
+const dropdownContent = $('.dropdown-content')
 
-function openDropdownContent() {
-  this.classList.add('is-open')
-}
-gnb.addEventListener('mouseenter', openDropdownContent)
+dropdownContent.hide()
+gnbBg.hide()
 
-function closeDropdownContent() {
-  this.classList.remove('is-open')
+function slideDownContent() {
+  dropdownContent.slideDown(350)
+  gnbBg.slideDown(250)
 }
-gnb.addEventListener('mouseleave', closeDropdownContent)
+gnb.mouseenter(slideDownContent)
+
+function slideUpContent() {
+  dropdownContent.slideUp(250)
+  gnbBg.slideUp(350)
+}
+gnb.mouseleave(slideUpContent)

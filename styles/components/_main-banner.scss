@@ -12,23 +12,92 @@
       }
     }
 
-    &-pagination-bullet {
-      width: 10px;
-      height: 10px;
-      background-color: $gray-100;
-      opacity: 1;
+    &-pagination {
+      bottom: 30px;
 
-      &-active {
-        width: 30px;
-        background-color: $yellow;
-        border-radius: 30px;
+      &-bullet {
+        width: 10px;
+        height: 10px;
+        background-color: $gray-100;
+        opacity: 1;
+
+        &-active {
+          width: 30px;
+          background-color: $yellow;
+          border-radius: 30px;
+        }
       }
     }
   }
 
   &.desktop-hidden {
-    .swiper-pagination {
-      bottom: 20px;
+    padding-bottom: 20px;
+    background-color: $gray-200;
+
+    .order {
+      position: relative;
+      top: -20px;
+      z-index: $order-level;
+      display: flex;
+      justify-content: space-evenly;
+      min-width: 290px;
+      padding: 25px 0;
+      margin: 0 15px;
+      overflow: hidden;
+      background-color: $white;
+      border-radius: 30px 0 30px 0;
+
+      &::before {
+        order: 2;
+        width: 1px;
+        height: 150px;
+        background-color: $gray-400;
+        content: '';
+      }
+
+      &-card {
+        @include column-flexbox;
+        padding: 0 30px;
+        transition: opacity 200ms ease-in-out;
+
+        &:last-child {
+          order: 3;
+        }
+
+        &:active,
+        &:hover {
+          opacity: 0.7;
+        }
+
+        strong {
+          display: inline-block;
+          padding: 8px 0 4px 16px;
+          font-size: 16px;
+          background-image: url('./assets/icons/tip.png');
+          background-repeat: no-repeat;
+          background-size: 30px 30px;
+        }
+
+        span {
+          display: block;
+          margin-bottom: 15px;
+          font-size: 14px;
+          font-weight: $font-weight-semibold;
+          color: $gray-500;
+        }
+
+        .icon {
+          display: block;
+          max-width: 100px;
+          overflow: hidden;
+
+          img {
+            display: block;
+            width: 100%;
+            height: auto;
+          }
+        }
+      }
     }
 
     @include media-breakpoint-up(lg) {
@@ -56,9 +125,65 @@
             object-fit: cover;
           }
         }
+      }
 
-        &-pagination {
-          bottom: 30px;
+      .quick-link {
+        @include flexbox;
+        position: absolute;
+        right: 30px;
+        bottom: -50px;
+        z-index: $quick-link-level;
+        overflow: hidden;
+        border-radius: 30px 0 30px 0;
+        box-shadow: $dropdown-shadow;
+
+        a {
+          @include flexbox;
+          width: 300px;
+          height: 75px;
+          overflow: hidden;
+          text-align: center;
+          transition: color 200ms ease-in-out;
+
+          &::before {
+            display: block;
+            width: 24px;
+            height: 30px;
+            margin-right: 10px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            content: '';
+          }
+
+          strong {
+            display: block;
+            font-size: 20px;
+          }
+        }
+
+        .store {
+          background-color: $yellow;
+
+          &:hover {
+            color: $white;
+          }
+
+          &::before {
+            background-image: url('./assets/icons/map.png');
+          }
+        }
+
+        .franchise {
+          color: $white;
+          background-color: $green;
+
+          &:hover {
+            color: $black;
+          }
+
+          &::before {
+            background-image: url('./assets/icons/franchise.png');
+          }
         }
       }
     }

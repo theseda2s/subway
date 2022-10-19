@@ -1,3 +1,5 @@
+'use strict'
+
 const drawerMenu = $('.drawer-menu')
 const drawerMenuButton = $('button.drawer-menu-button')
 const drawerMenuContent = $('.drawer-menu-content')

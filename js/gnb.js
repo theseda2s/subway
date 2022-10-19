@@ -1,3 +1,5 @@
+'use strict'
+
 const gnb = $('.gnb')
 const gnbBg = $('.gnb-bg')
 const dropdownContent = $('.dropdown-content')

@@ -1,3 +1,5 @@
+'use strict'
+
 const openMenuButton = document.querySelector('.util .menu-button')
 const sidebar = document.querySelector('.sidebar')
 const overlay = document.querySelector('.overlay')

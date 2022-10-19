@@ -1,3 +1,5 @@
+'use strict'
+
 const mobileSwiper = new Swiper('.main-banner.desktop-hidden .swiper', {
   loop: true,
   autoplay: {

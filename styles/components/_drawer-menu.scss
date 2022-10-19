@@ -3,7 +3,7 @@
     .drawer-menu-button {
       color: $green;
 
-      .bi {
+      .fa-angle-down {
         color: $green-dark;
         transform: rotate(-180deg);
       }
@@ -24,7 +24,7 @@
       background-color: $gray-200;
     }
 
-    .bi {
+    .fa-angle-down {
       position: absolute;
       right: 20px;
       font-size: 20px;

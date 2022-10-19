@@ -1,0 +1,172 @@
+.slider {
+  position: relative;
+
+  .inner {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  &-list {
+    .swiper-slide {
+      width: 25%;
+      height: auto;
+    }
+  }
+
+  &-item {
+    @include column-flexbox;
+    width: 80%;
+    margin: 0 auto;
+
+    .image-card {
+      width: auto;
+      height: 190px;
+      transition: filter 200ms ease-in-out;
+
+      &:active {
+        filter: brightness(0.9);
+      }
+
+      img {
+        display: block;
+        width: auto;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .detail {
+      @include column-flexbox;
+
+      & > * {
+        transition: opacity 200ms ease-in-out;
+
+        &:active {
+          opacity: 0.7;
+        }
+      }
+
+      .title {
+        margin-bottom: 10px;
+        font-size: 16px;
+      }
+
+      .desc {
+        font-size: 14px;
+        color: $gray-600;
+        text-align: center;
+      }
+    }
+  }
+
+  &-controls {
+    button {
+      position: absolute;
+      top: 50%;
+      z-index: $button-level;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      transition: background-color 200ms ease-in-out;
+
+      &:last-child {
+        right: 0;
+      }
+
+      &:active,
+      &:hover {
+        background-color: $yellow;
+
+        i {
+          color: $black;
+        }
+      }
+
+      &.swiper-button-disabled,
+      &[disabled] {
+        background-color: transparent;
+
+        i {
+          color: $gray-400;
+        }
+      }
+
+      i {
+        font-size: 35px;
+        color: $gray-600;
+        transition: color 200ms ease-in-out;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    &-item {
+      .image-card {
+        height: 180px;
+
+        &:active {
+          filter: none;
+        }
+      }
+    }
+
+    .detail {
+      .title {
+        z-index: 40;
+        font-size: 18px;
+      }
+
+      .desc {
+        font-size: 15px;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    &-item {
+      .image-card {
+        transition: transform 200ms ease-in-out;
+      }
+
+      .detail {
+        .title {
+          transition: font-size 200ms ease-in-out;
+        }
+
+        .desc {
+          transition: opacity 300ms ease-in-out;
+        }
+      }
+
+      &:hover {
+        .image-card {
+          position: relative;
+          margin-bottom: 15px;
+          transform: scale(1.4);
+
+          &::after {
+            @include pos-center-x;
+            bottom: 0;
+            display: block;
+            width: 60px;
+            height: 60px;
+            background-image: url('./assets/icons/more.png');
+            background-size: cover;
+            content: '';
+          }
+        }
+
+        .detail {
+          .title {
+            font-size: 22px;
+          }
+
+          .desc {
+            opacity: 0;
+          }
+        }
+      }
+    }
+  }
+}

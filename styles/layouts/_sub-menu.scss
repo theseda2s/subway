@@ -1,0 +1,102 @@
+.sub-menu {
+  margin-top: 20px;
+  margin-bottom: 50px;
+
+  .tab-header {
+    @include column-flexbox;
+    margin-bottom: 20px;
+
+    .title {
+      display: inline-block;
+      padding: 10px 0 0 15px;
+      margin-bottom: 20px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 30px;
+      letter-spacing: -0.01em;
+      background-image: url('./assets/icons/tip.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    ul {
+      @include flexbox();
+    }
+
+    .tab-menu {
+      position: relative;
+      flex-grow: 0;
+      flex-shrink: 0;
+      padding: 0 10px;
+      transition: color 200ms ease-in-out, font-weight 200ms ease-in-out;
+
+      &:first-child {
+        padding-left: 0;
+      }
+
+      &:last-child {
+        padding-right: 0;
+      }
+
+      &:not(:last-child)::after {
+        position: absolute;
+        top: 5px;
+        right: 0;
+        display: block;
+        width: 1px;
+        height: 15px;
+        background-color: $gray-400;
+        content: '';
+      }
+
+      &.active {
+        font-weight: $font-weight-bold;
+        color: $green;
+      }
+
+      &:hover,
+      &:active {
+        color: $green;
+      }
+
+      a {
+        font-size: 14px;
+        letter-spacing: -0.03em;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    .tab-header {
+      flex-direction: row;
+      justify-content: space-between;
+
+      .title {
+        margin-bottom: 0;
+      }
+
+      ul {
+        position: relative;
+        top: 5px;
+      }
+
+      .tab-menu {
+        padding: 0 20px;
+
+        a {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    margin-top: 50px;
+
+    .tab-header {
+      .title {
+        padding: 15px 0 0 25px;
+        font-size: 40px;
+      }
+    }
+  }
+}

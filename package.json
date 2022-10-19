@@ -21,7 +21,6 @@
   "homepage": "https://github.com/theseda2s/subway#readme",
   "dependencies": {
     "bootstrap": "^5.2.0",
-    "bootstrap-icons": "^1.9.1",
     "node-sass": "^7.0.1"
   },
   "devDependencies": {

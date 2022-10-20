@@ -20,6 +20,12 @@
         height: 10px;
         background-color: $gray-100;
         opacity: 1;
+        transition: background-color 200ms ease-in-out;
+
+        &:hover,
+        &:active {
+          background-color: $yellow;
+        }
 
         &-active {
           width: 30px;

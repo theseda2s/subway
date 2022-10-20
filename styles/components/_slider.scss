@@ -104,10 +104,6 @@
     &-item {
       .image-card {
         height: 180px;
-
-        &:active {
-          filter: none;
-        }
       }
     }
 
@@ -127,6 +123,10 @@
     &-item {
       .image-card {
         transition: transform 200ms ease-in-out;
+
+        &:active {
+          filter: none;
+        }
       }
 
       .detail {

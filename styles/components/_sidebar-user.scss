@@ -2,11 +2,15 @@
   .user-info {
     @include flexbox(start);
     margin-bottom: 20px;
-    transition: opacity 200ms ease-in-out;
 
-    &:hover,
     &:active {
-      opacity: 0.8;
+      .user-image {
+        filter: brightness(0.8);
+      }
+
+      .user-detail {
+        color: $gray-800;
+      }
     }
   }
 
@@ -25,11 +29,13 @@
     background-size: cover;
     border: 2px solid $yellow;
     border-radius: 15px;
+    transition: filter 200ms ease-in-out;
   }
 
   .user-detail {
     @include column-flexbox(center, start);
     color: $white;
+    transition: color 200ms ease-in-out;
 
     strong {
       font-size: 18px;
@@ -72,11 +78,11 @@
       font-size: 20px;
       color: $yellow;
       text-align: right;
-      transition: opacity 200ms ease-in-out;
+      transition: color 200ms ease-in-out;
 
       &:hover,
       &:active {
-        opacity: 0.8;
+        color: $white;
       }
 
       a {
@@ -120,10 +126,18 @@
     background-color: $yellow;
     border-radius: 30px 0 0 0;
 
+    &:hover,
+    &:active {
+      .qr-check {
+        color: $gray-700;
+      }
+    }
+
     .qr-check {
       font-weight: $font-weight-bold;
       line-height: 50px;
       color: $white;
+      transition: color 200ms ease-in-out;
     }
   }
 }

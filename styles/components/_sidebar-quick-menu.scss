@@ -14,12 +14,6 @@
   .quick-item {
     @include inline-flexbox;
     width: calc(100% / 3);
-    transition: opacity 200ms ease-in-out;
-
-    &:active,
-    &:hover {
-      opacity: 0.8;
-    }
 
     &:nth-child(-n + 3) {
       margin-bottom: 20px;
@@ -32,17 +26,30 @@
         width: 100px;
         height: auto;
 
+        &:active {
+          img {
+            opacity: 0.6;
+          }
+
+          span {
+            color: $green;
+          }
+        }
+
         img {
           display: block;
           width: 50px;
           height: 100%;
           margin: 0 auto;
+          margin-bottom: 10px;
+          transition: opacity 200ms ease-in-out;
         }
 
         span {
           display: block;
           font-size: 12px;
           font-weight: $font-weight-bold;
+          transition: color 200ms ease-in-out;
         }
       }
     }

@@ -5,7 +5,7 @@
 .gnb {
   display: none;
 
-  @include media-breakpoint-up(lg) {
+  @include media-breakpoint-up(xl) {
     @include pos-center-x;
     z-index: $gnb-level;
     display: block;

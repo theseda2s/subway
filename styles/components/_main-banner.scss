@@ -99,7 +99,7 @@
       }
     }
 
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(xl) {
       display: none;
     }
   }
@@ -108,14 +108,14 @@
     display: none;
     margin-top: 68px;
 
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(xl) {
       display: block;
 
       .swiper {
         a {
           position: relative;
           width: 0;
-          height: 350px;
+          height: 440px;
           padding-left: 100%;
 
           img {
@@ -183,14 +183,6 @@
           &::before {
             background-image: url('./assets/icons/franchise.png');
           }
-        }
-      }
-    }
-
-    @include media-breakpoint-up(xl) {
-      .swiper {
-        a {
-          height: 440px;
         }
       }
     }

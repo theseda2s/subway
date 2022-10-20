@@ -123,7 +123,7 @@
     }
   }
 
-  @include media-breakpoint-up(lg) {
+  @include media-breakpoint-up(xl) {
     &-item {
       .image-card {
         transition: transform 200ms ease-in-out;

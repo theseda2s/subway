@@ -15,7 +15,7 @@
     visibility: visible;
   }
 
-  @include media-breakpoint-up(lg) {
+  @include media-breakpoint-up(xl) {
     display: none;
   }
 }

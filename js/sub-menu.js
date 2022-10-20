@@ -54,11 +54,11 @@ function slider() {
 
     $(window).on('load resize', function () {
       var winW = window.innerWidth
-      if (winWChk != 'pc' && winW > 1280) {
+      if (winWChk != 'pc' && winW > 1200) {
         // PC 버전으로 전환할 때
         winWChk = 'pc'
         sliderAct()
-      } else if (winWChk != 'ta' && 1281 > winW && winW > 767) {
+      } else if (winWChk != 'ta' && 1201 > winW && winW > 767) {
         // 태블릿 버전으로 전환할 때
         winWChk = 'ta'
         sliderAct()

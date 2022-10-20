@@ -50,35 +50,31 @@
       }
     }
 
-    .button-group > * {
-      display: inline-block;
-      width: 40px;
-      height: 40px;
-      background-position: center center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      transition: opacity 100ms ease-in-out;
+    $icons: (
+      'refresh': 'refresh',
+      'push': 'alarm',
+      'setting': 'setting',
+      'close-button': 'close',
+    );
+    @each $button, $icon in $icons {
+      .#{$button} {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background-image: url('./assets/icons/#{$icon}.png');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        transition: opacity 100ms ease-in-out;
 
-      &:active,
-      &:hover {
-        opacity: 0.6;
+        &:active,
+        &:hover {
+          opacity: 0.6;
+        }
       }
     }
 
-    .refresh {
-      background-image: url('./assets/icons/refresh.png');
-    }
-
-    .push {
-      background-image: url('./assets/icons/alarm.png');
-    }
-
-    .setting {
-      background-image: url('./assets/icons/setting.png');
-    }
-
     .close-button {
-      background-image: url('./assets/icons/close.png');
       background-size: 27px;
     }
   }

@@ -106,16 +106,20 @@
       .button-group {
         @include flexbox(start);
 
-        & > * {
-          display: block;
-          width: 30px;
-          height: 30px;
-          background-position: center center;
-          background-repeat: no-repeat;
-          transition: opacity 200ms ease-in-out;
+        $icons: 'cart', 'global';
+        @each $icon in $icons {
+          .#{$icon} {
+            display: block;
+            width: 30px;
+            height: 30px;
+            background-image: url('./assets/icons/util-#{$icon}.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            transition: opacity 200ms ease-in-out;
 
-          &:hover {
-            opacity: 0.7;
+            &:hover {
+              opacity: 0.7;
+            }
           }
         }
       }
@@ -123,27 +127,18 @@
       .cart {
         position: relative;
         margin-right: 10px;
-        background-image: url('./assets/icons/util-cart.png');
 
         .badge {
+          @include truncate;
           position: absolute;
           bottom: 0;
           left: 0;
           display: block;
-          font-size: 10px;
+          max-width: 80%;
+          font-size: 8px;
           background-color: $orange;
           border-radius: 50%;
-          // NOTE: TRUNCATE 적용하기
         }
-      }
-
-      .global {
-        display: block;
-        width: 32px;
-        height: 32px;
-        background-image: url('./assets/icons/util-global.png');
-        background-position: center center;
-        background-repeat: no-repeat;
       }
     }
   }

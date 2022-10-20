@@ -1,0 +1,59 @@
+.quick-menu {
+  display: none;
+
+  @include media-breakpoint-up(xl) {
+    display: block;
+    padding: 40px 0;
+
+    &-list {
+      @include flexbox(between);
+    }
+
+    &-item {
+      @for $i from 1 through 4 {
+        $pos: (-70px * ($i - 1)) - 1px;
+
+        &--0#{$i} {
+          .quick-menu-icon {
+            width: 68px;
+            height: 68px;
+            margin-right: 20px;
+            overflow: hidden;
+            background-image: url('./assets/icons/quickmenu.png');
+            background-position: #{$pos} -1px;
+            border-radius: 50%;
+            transition: filter 200ms ease-in-out;
+
+            &:hover {
+              filter: brightness(0.8);
+            }
+          }
+        }
+      }
+
+      a {
+        @include flexbox;
+
+        dt {
+          margin-bottom: 5px;
+          font-size: 18px;
+          transition: color 200ms ease-in-out;
+
+          &:hover {
+            color: $green;
+          }
+        }
+
+        dd {
+          font-size: 14px;
+          color: $gray-500;
+          transition: color 200ms ease-in-out;
+
+          &:hover {
+            color: $gray-300;
+          }
+        }
+      }
+    }
+  }
+}

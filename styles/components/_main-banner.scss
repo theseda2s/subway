@@ -40,11 +40,10 @@
     background-color: $gray-200;
 
     .order {
+      @include flexbox(evenly);
       position: relative;
       top: -20px;
       z-index: $order-level;
-      display: flex;
-      justify-content: space-evenly;
       min-width: 290px;
       padding: 25px 0;
       margin: 0 15px;

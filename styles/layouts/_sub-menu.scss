@@ -1,10 +1,9 @@
 .sub-menu {
-  margin-top: 20px;
-  margin-bottom: 50px;
+  padding: 60px 0;
 
   .tab-header {
     @include column-flexbox;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 
     .title {
       display: inline-block;
@@ -89,8 +88,8 @@
     }
   }
 
-  @include media-breakpoint-up(lg) {
-    margin-top: 50px;
+  @include media-breakpoint-up(xl) {
+    margin: 80px 0;
 
     .tab-header {
       .title {

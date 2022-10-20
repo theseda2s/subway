@@ -1,3 +1,7 @@
 .wrap {
+  @include selection {
+    color: $white;
+    background: $green;
+  }
   min-width: 320px;
 }

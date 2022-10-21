@@ -1,3 +1,7 @@
+html {
+  @include scrollbar();
+}
+
 .wrap {
   @include selection {
     color: $white;

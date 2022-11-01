@@ -25,6 +25,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script
       src="https://kit.fontawesome.com/26f9e46b70.js"
       crossorigin="anonymous"
@@ -242,7 +243,7 @@
         <!-- mobile, tablet -->
         <section class="main-banner desktop-hidden">
           <div class="swiper">
-            <ul class="swiper-wrapper">
+            <ul class="swiper-wrapper" data-swiper-parallax="-23%">
               <li class="swiper-slide">
                 <a href="#none">
                   <img
@@ -344,7 +345,7 @@
           </div>
         </section>
 
-        <section class="sub-menu">
+        <section class="sub-menu" data-aos="fade-up" data-aos-offset="300">
           <div class="container">
             <div class="row">
               <div class="col-12">
@@ -864,7 +865,11 @@
           <div class="container">
             <div class="row">
               <div class="col-12">
-                <div class="sub-content-top">
+                <div
+                  class="sub-content-top"
+                  data-aos="fade-up"
+                  data-aos-offset="300"
+                >
                   <div class="howto">
                     <p class="title">
                       써브웨이를 <br />
@@ -890,7 +895,11 @@
                     >
                   </div>
                 </div>
-                <div class="sub-content-bottom">
+                <div
+                  class="sub-content-bottom"
+                  data-aos="fade-up"
+                  data-aos-offset="0"
+                >
                   <div class="news">
                     <div class="header">
                       <h1 class="title">What&rsquo;s new</h1>
@@ -937,7 +946,7 @@
         </section>
       </main>
 
-      <aside class="quick-menu">
+      <aside class="quick-menu" data-aos="fade-right">
         <div class="container">
           <div class="row">
             <div class="col-12">
@@ -1475,5 +1484,7 @@
     <script src="./js/banner.js"></script>
     <script src="./js/sub-menu.js"></script>
     <script src="./js/scroll-top.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./js/aos.js"></script>
   </body>
 </html>

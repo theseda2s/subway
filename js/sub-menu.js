@@ -11,12 +11,12 @@ function tab() {
 
     // 초기화
     $('.tab-menu').removeClass('active')
-    $('.tab-wrapper .tab-list').hide()
+    $('.tab-wrapper .tab-list').hide(300)
 
     // 실행
     $(this).parent().addClass('active')
     var activeTab = $(this).attr('href')
-    $(activeTab).show()
+    $(activeTab).show(300)
   })
 
   // 초기 탭 설정

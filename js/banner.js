@@ -10,6 +10,24 @@ const mobileSwiper = new Swiper('.main-banner.desktop-hidden .swiper', {
     el: '.main-banner.desktop-hidden .swiper-pagination',
     clickable: true,
   },
+
+  on: {
+    init: function () {
+      const autoPlayBtn = document.querySelector(
+        '.main-banner.desktop-hidden .swiper-autoplay-control > button'
+      )
+      autoPlayBtn.addEventListener('click', (e) => {
+        let autoPlayState = autoPlayBtn.getAttribute('aria-pressed')
+        if (autoPlayState === 'false') {
+          autoPlayBtn.setAttribute('aria-pressed', 'true')
+          this.autoplay.stop()
+        } else if (autoPlayState === 'true') {
+          autoPlayBtn.setAttribute('aria-pressed', 'false')
+          this.autoplay.start()
+        }
+      })
+    },
+  },
 })
 
 const desktopSwiper = new Swiper('.main-banner.desktop-only .swiper', {

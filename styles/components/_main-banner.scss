@@ -34,6 +34,47 @@
         }
       }
     }
+
+    &-autoplay-control {
+      position: absolute;
+      bottom: 30px;
+      left: calc(50% + 60px);
+      z-index: 10;
+      transform: translateX(-50%);
+
+      button {
+        display: block;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        background: transparent;
+        border: 0;
+
+        &::before {
+          position: absolute;
+          display: block;
+          content: '';
+        }
+
+        &[aria-pressed='false']::before {
+          top: 4px;
+          left: 4px;
+          width: 12px;
+          height: 12px;
+          border-right: 3px solid $yellow;
+          border-left: 3px solid $yellow;
+          box-sizing: border-box;
+        }
+
+        &[aria-pressed='true']::before {
+          top: 2px;
+          left: 2px;
+          border-top: 8px solid transparent;
+          border-bottom: 8px solid transparent;
+          border-left: 16px solid $yellow;
+        }
+      }
+    }
   }
 
   &.desktop-hidden {

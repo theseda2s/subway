@@ -1,0 +1,153 @@
+.quick-link {
+  @include column-flexbox;
+  width: 100%;
+  margin-bottom: 60px;
+
+  $icons: (
+    'store': 'map',
+    'franchise': 'franchise',
+  );
+  @each $button, $icon in $icons {
+    .#{$button} {
+      width: 100%;
+      padding: 40px 0;
+      overflow: hidden;
+      text-align: center;
+      cursor: default;
+
+      &-wrap {
+        @include column-flexbox;
+        margin-bottom: 20px;
+      }
+
+      strong {
+        @include flexbox;
+        margin-bottom: 30px;
+        font-size: 28px;
+        transition: color 200ms ease-in-out;
+
+        &::before {
+          display: block;
+          width: 24px;
+          height: 30px;
+          margin-right: 12px;
+          background-image: url('./assets/icons/#{$icon}.png');
+          background-repeat: no-repeat;
+          background-size: cover;
+          content: '';
+        }
+      }
+
+      span {
+        display: none;
+      }
+
+      @include media-breakpoint-up(md) {
+        width: 50%;
+      }
+
+      @include media-breakpoint-up(xl) {
+        &-wrap {
+          flex-direction: row;
+          justify-content: space-evenly;
+        }
+
+        strong {
+          margin-bottom: 0;
+        }
+
+        span {
+          display: block;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  .store {
+    background-color: $yellow;
+
+    fieldset {
+      @include flexbox;
+      padding: 15px;
+      border: 3px solid $green;
+
+      .store-search-text {
+        width: 180px;
+        font-size: 18px;
+      }
+
+      i {
+        color: $green;
+      }
+    }
+
+    strong {
+      margin-right: 30px;
+
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+
+  .franchise {
+    color: $white;
+    background-color: $green;
+
+    &-wrap {
+      strong {
+        &:hover {
+          color: $black;
+        }
+      }
+
+      div {
+        width: 220px;
+        padding: 12px;
+        border: 3px solid $yellow;
+
+        a {
+          position: relative;
+          display: inline-block;
+          width: 180px;
+          font-size: 18px;
+          text-align: left;
+          transition: color 200ms ease-in-out;
+
+          &:hover {
+            color: $yellow;
+          }
+
+          &::after {
+            position: absolute;
+            top: 0;
+            right: 5px;
+            content: '▶';
+          }
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    flex-direction: row;
+  }
+
+  @include media-breakpoint-up(xl) {
+    width: 1100px;
+    margin: 0 auto 60px;
+
+    .franchise {
+      &-wrap {
+        strong {
+          order: 2;
+        }
+
+        div {
+          order: 1;
+        }
+      }
+    }
+  }
+}
